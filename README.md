@@ -4,7 +4,7 @@ tune ext3 and ext4 filesystems using tune2fs.
 
 |Travis|GitHub|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-tune2fs.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-tune2fs)|[![github](https://github.com/robertdebock/ansible-role-tune2fs/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-tune2fs/actions)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/robertdebock/tune2fs)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/robertdebock/tune2fs)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-tune2fs.svg)](https://github.com/robertdebock/ansible-role-tune2fs/releases/)|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-tune2fs.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-tune2fs)|[![github](https://github.com/robertdebock/ansible-role-tune2fs/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-tune2fs/actions)|[![quality](https://img.shields.io/ansible/quality/51255)](https://galaxy.ansible.com/robertdebock/tune2fs)|[![downloads](https://img.shields.io/ansible/role/d/51255)](https://galaxy.ansible.com/robertdebock/tune2fs)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-tune2fs.svg)](https://github.com/robertdebock/ansible-role-tune2fs/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -55,9 +55,9 @@ These variables are set in `defaults/main.yml`:
 
 # A list of devices and their settings. Supported settings at the moment:
 # - maximum_count_mount
-tune2fs_settings:
-  - device: /dev/mapper/system-root
-    maximum_count_mount: 1
+# tune2fs_settings:
+#   - device: /dev/mapper/system-root
+#     maximum_count_mount: 1
 ```
 
 ## [Requirements](#requirements)
