@@ -1,0 +1,17 @@
+---
+# tasks file for tune2fs
+- name: include assert.yml
+  include_tasks: assert.yml
+  run_once: yes
+
+- name: install software for tune2fs
+  package:
+    name: e2fsprogs
+    state: present
+
+- name: loop over settings
+  include: setting.yml
+  loop: "{{ tune2fs_settings }}"
+  loop_control:
+    label: "{{ setting.device }}" 
+    loop_var: setting

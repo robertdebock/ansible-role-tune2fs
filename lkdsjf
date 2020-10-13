@@ -1,0 +1,51 @@
+[robertdb@laptop polizei]$ sudo tune2fs -l /dev/mapper/system-root 
+[sudo] password for robertdb: 
+tune2fs 1.45.5 (07-Jan-2020)
+Filesystem volume name:   <none>
+Last mounted on:          /
+Filesystem UUID:          04ebf6b6-0758-46eb-9d3e-df24a1158fc5
+Filesystem magic number:  0xEF53
+Filesystem revision #:    1 (dynamic)
+Filesystem features:      has_journal ext_attr resize_inode dir_index filetype needs_recovery extent 64bit flex_bg sparse_super large_file huge_file dir_nlink extra_isize metadata_csum
+Filesystem flags:         signed_directory_hash 
+Default mount options:    user_xattr acl
+Filesystem state:         clean
+Errors behavior:          Continue
+Filesystem OS type:       Linux
+Inode count:              60465152
+Block count:              241829888
+Reserved block count:     12091494
+Free blocks:              135304516
+Free inodes:              59491954
+First block:              0
+Block size:               4096
+Fragment size:            4096
+Group descriptor size:    64
+Reserved GDT blocks:      1024
+Blocks per group:         32768
+Fragments per group:      32768
+Inodes per group:         8192
+Inode blocks per group:   512
+Flex block group size:    16
+Filesystem created:       Thu Sep 24 14:58:31 2020
+Last mount time:          Fri Oct  9 08:37:54 2020
+Last write time:          Fri Oct  9 08:37:53 2020
+Mount count:              44
+Maximum mount count:      -1
+Last checked:             Thu Sep 24 14:58:31 2020
+Check interval:           0 (<none>)
+Lifetime writes:          284 GB
+Reserved blocks uid:      0 (user root)
+Reserved blocks gid:      0 (group root)
+First inode:              11
+Inode size:	          256
+Required extra isize:     32
+Desired extra isize:      32
+Journal inode:            8
+First orphan inode:       267667
+Default directory hash:   half_md4
+Directory Hash Seed:      60394b83-3f81-449c-92ea-3b4471a38565
+Journal backup:           inode blocks
+Checksum type:            crc32c
+Checksum:                 0x5fc22519
+
