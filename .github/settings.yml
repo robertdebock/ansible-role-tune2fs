@@ -1,4 +1,7 @@
 ---
+#
+# Ansible managed
+#
 repository:
-  description: Install and configure tune2fs on your system.
+  description: tune ext3 and ext4 filesystems using tune2fs.
   homepage: https://robertdebock.nl/

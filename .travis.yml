@@ -4,8 +4,11 @@
 #
 language: python
 
+os: linux
+dist: xenial
+
 python:
-  - "3.7"
+  - "3.8"
 
 services:
   - docker
@@ -13,18 +16,20 @@ services:
 env:
   global:
     namespace="robertdebock"
-  matrix:
+  jobs:
     - image="alpine" tag="latest"
     - image="alpine" tag="edge"
     - image="debian" tag="latest"
-    - image="debian" tag="unstable"
+    - image="debian" tag="bullseye"
     - image="centos" tag="7"
     - image="centos" tag="latest"
-    - image="fedora" tag="30"
+    - image="fedora" tag="31"
     - image="fedora" tag="latest"
     - image="fedora" tag="rawhide"
     - image="opensuse" tag="latest"
     - image="ubuntu" tag="latest"
+    - image="ubuntu" tag="bionic"
+    - image="ubuntu" tag="xenial"
 
 cache:
   - pip
@@ -34,10 +39,12 @@ install:
   - pip install tox
 
 script:
-  - tox --parallel all
+  - function retry { counter=0 ; until "$@" ; do exit=$? ; counter=$(($counter + 1)) ; if [ $counter -ge 3 ] ; then return $exit ; fi ; done ; return 0; } ; retry tox --parallel all
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
   slack:
-    secure: "# out of `travis encrypt robertdebock:TOKEN-FROM-SLACK`"
+    secure: "NlmExuks0fdQyPKkrZmL8haNzraEhvqDjGoax+PFIdO+zFEAFYSmF66eUF7LmeJ+gVT+Fy9fo09I43SRT3xi0YigBogDO6Z52AQklYIeVYkI9RnYXLzxO8aFQgx0lP2jLanMSCyCQx+hPZLnd2WYfc58roG3zh0jLElCqbL+x/x2xq0v/tIYnb+WJHKkZozjactYKjY4ccDk5GJxEcExlD0CxSUIKxpTkeaL9fVZFeNdhbIfVA5Qhuw/d9uUhwOZxQwRY7IPMAxQOgOQ8zjquYbqf52XILdSBUhK5iIqNQCgpYOiYSUlsFshplqhDKXt6fIqHOkrLn3918A2ogmixMn88pfsgtR5avbQaiIr4Q9actd7FzGi4b2cbInE00Jed5PgFVVadH5VGukaxtxlNxx41rNOEFfHSu4Qe5yt6f2FGMy0pcnNBhwsH74dJ3vUscNSx2GQGcqtJvuubktRyh5nFl2jkO6YjlLhaZzDOryp/pMUAzx827CHhdx1NEm3I240NRc93ljDWMHpj3RVyG6Ha0AtpRlpONv6nuGbqe/sKN4ZO3iwqPxCdY9f5U5F5rFDvmlRsPQ8yOJnta99N87C1sCqEVlXPyZsDCUacwLODzrWSZkbHfKKQ9O6iQ4GxItzeXg6UncEYYiIQGrqAKe55SD0UvFYpdKht2oJ2hI="
+    on_success: change
+    template: "%{result}: %{repository_slug}@%{branch}, build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>)"
   email: false

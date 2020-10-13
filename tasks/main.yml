@@ -13,5 +13,5 @@
   include: setting.yml
   loop: "{{ tune2fs_settings }}"
   loop_control:
-    label: "{{ setting.device }}" 
+    label: "{{ setting.device }}"
     loop_var: setting
