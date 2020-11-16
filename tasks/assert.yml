@@ -2,7 +2,6 @@
 - name: test if tune2fs_settings is set correctly
   assert:
     that:
-      - tune2fs_settings | length > 0
       - tune2fs_settings is iterable
     quiet: yes
   when:
