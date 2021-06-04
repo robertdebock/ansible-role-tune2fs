@@ -12,7 +12,8 @@
     state: present
 
 - name: loop over settings
-  ansible.builtin.include: setting.yml
+  ansible.builtin.include_tasks:
+    file: setting.yml
   loop: "{{ tune2fs_settings }}"
   loop_control:
     label: "{{ setting.device }}"
