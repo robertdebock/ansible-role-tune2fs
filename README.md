@@ -2,9 +2,9 @@
 
 tune ext3 and ext4 filesystems using tune2fs.
 
-|GitHub|GitLab|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-tune2fs/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-tune2fs/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-tune2fs/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-tune2fs)|[![quality](https://img.shields.io/ansible/quality/51255)](https://galaxy.ansible.com/robertdebock/tune2fs)|[![downloads](https://img.shields.io/ansible/role/d/51255)](https://galaxy.ansible.com/robertdebock/tune2fs)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-tune2fs.svg)](https://github.com/robertdebock/ansible-role-tune2fs/releases/)|
+|GitHub|GitLab|Downloads|Version|
+|------|------|---------|-------|
+|[![github](https://github.com/robertdebock/ansible-role-tune2fs/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-tune2fs/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-tune2fs/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-tune2fs)|[![downloads](https://img.shields.io/ansible/role/d/24610)](https://galaxy.ansible.com/robertdebock/tune2fs)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-tune2fs.svg)](https://github.com/robertdebock/ansible-role-tune2fs/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -89,7 +89,7 @@ The minimum version of Ansible required is 2.12, tests have been done to:
 - The current version.
 - The development version.
 
-If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-tune2fs/issues)
+If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-tune2fs/issues).
 
 ## [License](#license)
 
