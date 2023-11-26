@@ -1,4 +1,4 @@
-# Ansible role [tune2fs](#tune2fs)
+# [Ansible role tune2fs](#tune2fs)
 
 tune ext3 and ext4 filesystems using tune2fs.
 
