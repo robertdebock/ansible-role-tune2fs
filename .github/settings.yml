@@ -5,4 +5,4 @@
 repository:
   description: tune ext3 and ext4 filesystems using tune2fs.
   homepage: https://robertdebock.nl/
-  topics: tune2fs, system, ansible, molecule, tox, playbook
+  topics: tune2fs, system, ansible, molecule, playbook
