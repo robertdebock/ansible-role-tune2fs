@@ -3,7 +3,8 @@
 - name: setting | Get values
   ansible.builtin.command:
     cmd: tune2fs -l "{{ setting.device }}"
-  changed_when: false
+  changed_when:
+    - false
   register: tune2fs_values
   when:
     - ansible_connection not in [ "container", "docker", "community.docker.docker" ]
@@ -16,4 +17,5 @@
     - setting.maximum_count_mount is defined
     - setting.maximum_count_mount.stdout is defined
     - "'Maximum mount count:      {{ setting.maximum_count_mount }}' not in tune2fs_values.stdout"  # noqa: no-jinja-when
-  changed_when: true
+  changed_when:
+    - true
